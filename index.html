@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFT Fundraising Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎨 NFT Fundraising Platform</h1>
+      <p>Mint a unique NFT and support global causes.</p>
+    </header>
+
+    <!-- Wallet Connection Button -->
+    <button id="connectWallet" onclick="connectWallet()">Connect Wallet</button>
+
+    <!-- Donation Form -->
+    <form id="donationForm" class="hidden" onsubmit="mintNFT(event)">
+      <label for="amount">Enter Donation Amount (ETH):</label>
+      <input type="number" id="amount" value="0.01" step="0.01" readonly>
+      <button type="submit">Mint NFT</button>
+    </form>
+
+    <!-- Display Minted NFTs -->
+    <div id="nftGallery" class="hidden">
+      <h2>Your Minted NFTs:</h2>
+      <div id="nftList"></div>
+    </div>
+
+    <footer>
+      <p>Powered by Ethereum & NFTs for Charity</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
